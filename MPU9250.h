@@ -129,7 +129,9 @@
 #define MPU9250_ZA_OFFSET_L             0x7E
 
 //reset values
-#define WHOAMI_RESET_VAL                0x71
+#define MPU9250_WHOAMI_RESET_VAL        0x71
+#define MPU9255_WHOAMI_RESET_VAL        0x73
+#define WHOAMI_RESET_VAL                MPU9250_WHOAMI_RESET_VAL
 #define POWER_MANAGMENT_1_RESET_VAL     0x01
 #define DEFAULT_RESET_VALUE             0x00
 
@@ -340,7 +342,8 @@
 #define MPU9250_MAG_ASAZ                0x12
 
 //Magnetometer register masks
-#define MPU9250_WIA_MASK 0x48
+#define MPU9250_MAG_WIA_FIXED_VALUE     0x48
+#define MPU9250_WIA_MASK                MPU9250_MAG_WIA_FIXED_VALUE
  
 class MPU9250 {
     public:

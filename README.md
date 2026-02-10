@@ -1,7 +1,7 @@
-MPU9250
+MPU9250 / MPU9255
 ======================
 
-C++ MPU9250 Driver for Arduino
+C++ MPU9250/MPU9255 Driver for Arduino
 
 ![MPU-9250 datasheet (PDF)](www.invensense.com/mems/gyro/documents/PS-MPU-9250A-01.pdf)
 

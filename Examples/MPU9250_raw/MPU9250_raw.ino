@@ -31,16 +31,16 @@ THE SOFTWARE.
 // is used in I2Cdev.h
 #include "Wire.h"
 
-// I2Cdev and MPU9150 must be installed as libraries, or else the .cpp/.h files
+// I2Cdev and MPU9250/MPU9255 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
 #include "I2Cdev.h"
-#include "MPU9250.h"
+#include "MPU9255.h"
 
 // class default I2C address is 0x68
 // specific I2C addresses may be passed as a parameter here
 // AD0 low = 0x68 (default for InvenSense evaluation board)
 // AD0 high = 0x69
-MPU9250 accelgyro;
+MPU9255 accelgyro;
 
 int16_t ax, ay, az;
 int16_t gx, gy, gz;
@@ -64,7 +64,7 @@ void setup() {
 
     // verify connection
     Serial.println("Testing device connections...");
-    Serial.println(accelgyro.testConnection() ? "MPU9250 connection successful" : "MPU9250 connection failed");
+    Serial.println(accelgyro.testConnection() ? "MPU9250/MPU9255 connection successful" : "MPU9250/MPU9255 connection failed");
 
     // configure Arduino LED for
     pinMode(LED_PIN, OUTPUT);
